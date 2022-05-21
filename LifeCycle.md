@@ -16,3 +16,13 @@ state가 바뀔 때
 제거는 페이지를 이동하거나, 사용자의 행동(삭제 버튼 클릭 등)으로 인해 컴포넌트가 화면에서 사라지는 단계
 
 
+constructor() : 생성자 함수라고도 부릅니다. 컴포넌트가 생성되면 가장 처음 호출
+render() : 컴포넌트의 모양을 정의하는 함수. render() 안에 들어갈 내용은 컴포넌트의 모양에만 관여하는 것이 가장 좋다.
+즉, state나, props를 건드려 데이터를 수정하려고 하면 안된다.
+componentDidMount() : 이 함수는 첫번째 렌더링을 마친 후에만 딱 한 번 실행됩니다. 컴포넌트가 리렌더링할 때는 실행되지 않는다.
+이 안에서 ajax 요청, 이벤트 등록, 함수 호출 등 작업을 처리
+componentDidUpdate(prevProps, prevState, snapshot) : DidMount()가 첫 렌더링 후에 호출 되는 함수라면, DidUpdate()는 리렌더링을 완료한 후 실행되는 함수
+prevProps와 prevState 파라미터는 각각 업데이트 되기 전 props, state이다.
+componentWillUnmount() : 삼항연산자를 사용해서 컴포넌트를 보여주거나, 없애는 걸 조건부 렌더링이라 한다.
+
+
