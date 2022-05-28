@@ -28,7 +28,7 @@ html 요소(element), 또는 React 요소 등의 코드가 눈으로 볼 수 있
 
 <br>
 
-## Prop 
+## Props 
 컴포넌트를 사용하는 외부자를 위한 데이터<br>
 컴포넌트는, 데이터를 가진 하나의 'props' 객체 인자를 받은 후 React 엘리먼트를 반환한다. 이때 props는 속성을 나타내는 데이터다.<br>
 props는 읽기 전용이므로 컴포넌트의 내부에서 props를 수정해서는 안 된다. 입력값을 수정하지 않는 함수를 순수 함수라고 호칭하며,<br> 
@@ -45,8 +45,18 @@ function Dog(props) {
 	}
 }
 ```
-
-
+다른 형식으로는 아래와 같이 나타낼 수도 있다.
+```
+function Hello({ color, name }) {
+  return <div style={{ color }}>안녕하세요 {name}</div>
+}
+```
+<br>
+또한 아래와 같이
+```
+.defaultProps ={ name='이름없음' }
+```
+이런식으로 해당 props가 주어지지않은경우 나타낼 수 있다.
 
 ## State
 컴포넌트를 만드는 내부자를 위한 데이터<br>
