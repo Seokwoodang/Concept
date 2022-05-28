@@ -52,11 +52,12 @@ function Hello({ color, name }) {
 }
 ```
 <br>
-또한 아래와 같이
+
+이런식으로 해당 props가 주어지지않은경우 나타낼 수 있다.
 ```
 .defaultProps ={ name='이름없음' }
 ```
-이런식으로 해당 props가 주어지지않은경우 나타낼 수 있다.
+
 
 ## State
 컴포넌트를 만드는 내부자를 위한 데이터<br>
