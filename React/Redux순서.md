@@ -77,5 +77,5 @@ index.js 에 import { Provider } from "react-redux";
   
   const contactList = useSelector(state=>state.contactList) // 선언을 해준다.
   {contactList.map((item)=>(<ContactItem/>))}
-  
+  ```
   
