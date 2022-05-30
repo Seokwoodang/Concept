@@ -58,8 +58,10 @@ index.js 에 import { Provider } from "react-redux";
   
   function reducer(state=initialState,action){}
     switch(action.type){
-      case "blabla":
-        return{...state,contactList:[...state.comtactList,{name:action.payload,phoneNumber:action.payload.phoneNumber}]}
+      case "blabla":        // " dispatch를 통해 보내준 type이 blabla일 경우
+        return{...state,    // ...state를 반드시 앞에 넣어주어야한다. 
+              contactList:[...state.comtactList,{name:action.payload,phoneNumber:action.payload.phoneNumber}]} 
+              // array안의 값은 유지를 하되, name은 dispatch를 통해 보낸 name으로 바꾸어주고 phoneNumber는 dispatch를 통해 보낸 phoneNumber로 바꾸어줘라.
     default:
       return {...state};
   }
