@@ -69,9 +69,13 @@ index.js 에 import { Provider } from "react-redux";
   export default reducer;
   ```
   
+  ## Store에서 값 읽어오기
+  ### useSelector
   
+  ```
+  import { useSelector } from "react-redux";
   
-  
-  
+  const contactList = useSelector(state=>state.contactList) // 선언을 해준다.
+  {contactList.map((item)=>(<ContactItem/>))}
   
   
