@@ -69,3 +69,18 @@ console.log(x); // 1
 - var 또는 let 키워드로 선언한 변수는 재할당이 자유로우나 const 키워드로 선언한 변수는 재할당이 금지
 - const 키워드로 선언한 변수에 원시 값을 할당한 경우 변수 값을 변경할 수 없다. <br>이러한 특징을 이용해 const 키워드를 상수를 표현하는 데 사용하기도 한다.
 
+
+## TDZ란??
+![tdz](https://velog.velcdn.com/images%2Fsoshin_dev%2Fpost%2F53592d46-e4c4-425a-8114-78f64ae040cd%2Fimage.png)
+### 변수의 할당 단계
+#### 1.선언 단계(Declaration phase)
+변수를 실행 컨텍스트의 변수 객체에 등록하는 단계를 의미합니다. 이 변수 객체는 스코프가 참조하는 대상이 됩니다.
+
+#### 2.초기화 단계(Initialization phase)
+실행 컨텍스트에 존재 하는 변수 객체에 선언 단계의 변수를 위한 메모리를 만드는 단계 입니다. 이 단계에서 할당된 메모리에는 undefined로 초기화 됩니다.
+
+#### 3.할당 단계(Assignment phase) 
+사용자가 undefined로 초기화된 메모리의 다른 값을 할당하는 단계 입니다. 
+
+let, const, class 의 경우 TDZ의 영향을 받지만
+var, function,import 의 경우 TDZ의 영향을 받지 않는다.
