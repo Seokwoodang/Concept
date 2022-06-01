@@ -85,7 +85,7 @@ console.log(x); // 1
 let, const, class 의 경우 TDZ의 영향을 받지만
 var, function,import 의 경우 TDZ의 영향을 받지 않는다.
 
-## 데이터타입 종류/ 심벌타입/데이터타입 왜 필요할까요?
+## 데이터타입 종류/ 심벌타입이란? /데이터타입 왜 필요할까요?
 ### 데이터타입의 종류
 - Boolean 타입 : Boolean 타입은 논리 요소를 나타내며 true와 false 두 가지의 값을 가질 수 있다.
 - Null 타입 : Null 타입은 null 하나의 값만 가질 수 있다. 컴퓨터 과학에서 null 값은 일반적으로 존재하지 않거나 유효하지 않은<br>                 object 또는 주소를 의도적으로 가리키는 참조를 나타낸다. <br>
@@ -103,3 +103,17 @@ Symbol("foo") === Symbol("foo"); // false
 ```
 
 [참고문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures#undefined_%ED%83%80%EC%9E%85)
+
+데이터타입이 필요한 이유
+- 우리가 변수에 할당하려는 값의 '데이터 타입'에 따라 확보해야 할 메모리 공간의 크기가 결정되기 때문이다.
+- 값을 참조해서 사용하는 경우 데이터를 참조하는 과정에서 얼마의 메모리 공간을 읽어 들일지 알기 위해서.
+- 데이터 타입에 따라 컴퓨터가 데이터를 해석하는 방법이 다르기 때문이다.
+
+
+
+
+
+
+
+
+
