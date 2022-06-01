@@ -84,3 +84,22 @@ console.log(x); // 1
 
 let, const, class 의 경우 TDZ의 영향을 받지만
 var, function,import 의 경우 TDZ의 영향을 받지 않는다.
+
+## 데이터타입 종류/ 심벌타입/데이터타입 왜 필요할까요?
+### 데이터타입의 종류
+- Boolean 타입 : Boolean 타입은 논리 요소를 나타내며 true와 false 두 가지의 값을 가질 수 있다.
+- Null 타입 : Null 타입은 null 하나의 값만 가질 수 있다. 컴퓨터 과학에서 null 값은 일반적으로 존재하지 않거나 유효하지 않은<br>                 object 또는 주소를 의도적으로 가리키는 참조를 나타낸다. <br>
+              null은 JavaScript의 원시 값 중 하나로, 어떤 값이 의도적으로 비어있음을 표현하며 불리언 연산에서는 거짓으로 취급
+- Undefined 타입 : undefined는 원시값으로, 선언한 후 값을 할당하지 않은 변수 혹은 값이 주어지지 않은 인수에 자동으로 할당된다.
+- Number 타입 : Number 타입은 배정밀도 64비트 이진 형식 값이다.
+- BigInt 타입 : BigInt 타입은 임의 정밀도로 정수를 나타낼 수 있는 JavaScript 숫자 원시 값이다.<br>
+                Number의 안전 한계를 넘어서는 큰 정수도 안전하게 저장하고 연산할 수 있다.
+- String 타입 : String 타입은 텍스트 데이터를 나타낼 때 사용한다.
+- Symbol 타입 : Symbol은 고유하고 변경 불가능한 원시 값이며 객체의 속성키로 사용할 수 있다.<br>
+                이름이 충동할 위험이 없는 객체의 유일한 프로퍼티 키를 만들기 위해 사용
+ 
+```
+Symbol("foo") === Symbol("foo"); // false
+```
+
+[참고문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures#undefined_%ED%83%80%EC%9E%85)
