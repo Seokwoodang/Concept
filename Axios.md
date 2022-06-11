@@ -201,8 +201,8 @@ async function getUser() {
 
 ### axios POST
 
-post 메서드에는 일반적으로 데이터를 Message Body에 포함시켜 보낸다.
-위에서 봤던 get 메서드에서 params를 사용한 경우와 비슷하게 수행된다.
+post 메서드에는 일반적으로 데이터를 Message Body에 포함시켜 보낸다.<br/>
+위에서 봤던 get 메서드에서 params를 사용한 경우와 비슷하게 수행된다.<br/>
 ```
 axios.post("url", {
 		firstName: 'Fred',
@@ -217,8 +217,8 @@ axios.post("url", {
 
 
 ### axios Delete
-delete 메서드에는 일반적으로 body가 비어있다.
-REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 삭제하는 목적으로 사용한다.
+delete 메서드에는 일반적으로 body가 비어있다.<br/><br/>
+REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 삭제하는 목적으로 사용한다.<br/>
 
 ```
 axios.delete('/user?ID=12345')
@@ -250,6 +250,21 @@ axios.delete('/user?ID=12345',{
   })
 ```
 
+### axios PUT
+REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 갱신(수정)하는 목적으로 사용된다..<br/>
+PUT메서드는 서버에 있는 데이터베이스의 내용을 변경하는 것을 주 목적으로 하고 있다.<br/>
+put 메서드는 서버 내부적으로 get -> post 과정을 거치기 때문에 post 메서드와 비슷한 형태이다.<br/>
+```
+axios.put("url", {
+        username: "",
+        password: ""
+    })
+    .then(function (response) {
+         // response  
+    }).catch(function (error) {
+        // 오류발생시 실행
+    })
+```
 
 
 
